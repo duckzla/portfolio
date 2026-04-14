@@ -1,0 +1,251 @@
+@import url('icons.css');
+
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* mettre les couleurs du theme de mon site */
+    --white:#fff;
+    --black:#000;
+    --couleur-principal_sombre:#2d2e2ece;
+    --box-s:#2525259f;
+    --couleur-secondaire:#A8A8A8;
+    --couleur-secondaire_claire:#c7c7c7;
+    --gris: rgb(100, 100, 100);
+    --fond-site: #F2F2F2;
+
+
+    /* C'est pour la taille du texte (plus simple pour les calculs rem) */
+    --base-px:10px;
+    --grid-gap:2rem;
+    --transition_time: 0.5s;
+}
+
+html{
+    font-size: var(--base-px);
+}
+
+body{
+    /* il faut trouver une fonts et les tailles */
+    font-family: 'poppins', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    font-weight: 400;
+    background: var(--fond-site);
+}
+
+a{
+    /* on enleve les traits sous les liens */
+    text-decoration: none;
+}
+
+img,
+video{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Pour le cadrillage de la page */
+.row{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:var(--grid-gap);
+}
+
+.col-1{
+    grid-column: span 1;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
+.col-3{
+    grid-column: span 3;
+}
+
+.col-4{
+    grid-column: span 4;
+}
+
+.col-5{
+    grid-column: span 5;
+}
+
+.col-6{
+    grid-column: span 6;
+}
+
+.col-7{
+    grid-column: span 7;
+}
+
+.col-8{
+    grid-column: span 8;
+}
+
+.col-9{
+    grid-column: span 9;
+}
+
+.col-10{
+    grid-column: span 10;
+}
+
+.col-11{
+    grid-column: span 11;
+}
+
+.col-12{
+    grid-column: span 12;
+}
+
+
+/* PARTIE HEADER: */
+/* Le header est dans le header.css */
+
+
+
+
+/* PARTIE MAIN: */
+
+main{
+
+color: var(--couleur-principal_sombre);
+
+    h2{
+        color: var(--black);
+    }
+
+    .pres-veille{
+        margin-inline: 10%;
+
+        h1,
+        h2{
+            margin-bottom: 2rem;
+        }
+    }
+
+    .entete{
+        display: flex;
+        position: relative;
+        justify-content: center;
+        height: 100px;
+        gap: 4rem;
+        text-align: center;
+        margin-bottom: 50px;
+
+    }
+
+    .partie-exp{
+        display: block;
+        position: relative;
+        gap: 4rem;
+        margin-bottom: 25px;
+
+        
+    }
+
+
+    .cartes{
+        display: flex;
+        position: relative;
+        margin: 25px;
+        margin-bottom: 50px;
+
+        .carte{
+            background-color: var(--couleur-secondaire_claire);
+            padding: 25px;
+            margin: 1rem;
+            border-radius: 5px;
+            box-shadow: 9px 11px 25px -10px #2525259f;
+        }
+    }
+
+    .liste-sujet{
+        display: flex;
+        position: relative;
+
+        .sujet{
+            display: flex;
+            position: relative;
+            height: 100px;
+
+            .icon{
+                display: flex;
+                position: relative;
+                height: 50px;
+                width: 50px;
+                margin-inline: 15px;
+                color: blue;
+            }
+
+            img{
+                position: relative;
+            }
+        }
+    }
+
+    
+    .les-outils{
+        position: relative;
+        display: flex;
+
+        
+    }
+
+    .outils-veille{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin-bottom: 50px;
+
+
+        .cadres{
+            display: flex;
+            gap: 3rem;
+            flex-flow: column;
+        }
+
+        .partie{
+            display: flex;
+            gap: 3rem;
+        }
+
+        .cadre{
+            background-color: var(--couleur-secondaire_claire);
+            border-radius: 10px;
+            padding: 25px;
+            width: 100%;
+            box-shadow: 9px 11px 25px -10px #2525259f;
+        }
+
+        ul{
+            padding-inline: 25px;
+        }
+    }
+
+
+
+}
+
+
+
+
+
+/* PARTIE FOOTER: */
+
+footer{
+
+    .droit-site{
+        color: var(--gris);
+        text-align: center;
+        font-size: 1rem;
+    }
+
+}

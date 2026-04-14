@@ -1,0 +1,280 @@
+@import url('icons.css');
+
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* mettre les couleurs du theme de mon site */
+    --white:#fff;
+    --black:#000;
+    --couleur-principal_sombre:#2d2e2ece;
+    --box-s:#2525259f;
+    --couleur-secondaire:#A8A8A8;
+    --couleur-secondaire_claire:#c7c7c7;
+    --gris: rgb(100, 100, 100);
+    --fond-site: #F2F2F2;
+
+
+    /* C'est pour la taille du texte (plus simple pour les calculs rem) */
+    --base-px:10px;
+    --grid-gap:2rem;
+    --transition_time: 0.5s;
+}
+
+html{
+    font-size: var(--base-px);
+}
+
+body{
+    /* il faut trouver une fonts et les tailles */
+    font-family: 'poppins', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    font-weight: 400;
+    background: var(--fond-site);
+}
+
+a{
+    /* on enleve les traits sous les liens */
+    text-decoration: none;
+}
+
+img,
+video{
+    width: 100%;
+    height: 100%;
+}
+
+.poppins{
+    font-family: "poppins", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+/* Pour le cadrillage de la page */
+.row{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:var(--grid-gap);
+    
+}
+
+.col-1{
+    grid-column: span 1;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
+.col-3{
+    grid-column: span 3;
+}
+
+.col-4{
+    grid-column: span 4;
+}
+
+.col-5{
+    grid-column: span 5;
+}
+
+.col-6{
+    grid-column: span 6;
+}
+
+.col-7{
+    grid-column: span 7;
+}
+
+.col-8{
+    grid-column: span 8;
+}
+
+.col-9{
+    grid-column: span 9;
+}
+
+.col-10{
+    grid-column: span 10;
+}
+
+.col-11{
+    grid-column: span 11;
+}
+
+.col-12{
+    grid-column: span 12;
+}
+
+
+/* PARTIE HEADER: */
+
+/* Le header est dans le header.css */
+
+
+
+
+
+/* PARTIE MAIN: */
+
+main{
+overflow-x: hidden;
+
+    h1,
+    h2{
+        color: var(--black);
+    }
+
+
+
+    .presentation{
+        display: flex;
+    }
+
+    .cadre-pres{
+        display: flex;
+        position: relative;
+        background-color: var(--couleur-secondaire_claire);
+        border-radius:  15px;
+        margin-inline: 100px;
+        box-shadow: 9px 11px 25px -10px #2525259f;
+        overflow: hidden;
+        width: 1200px;
+        
+
+        .pres-texte{
+            position: relative;
+            align-items: center;
+            color: var(--bleu);
+            font-size: 2rem;
+            padding: 7.5%;
+            width: 750px;
+            
+
+            h2{
+                display: flex;
+                font-size: 4rem;
+                position: relative;
+                justify-content: center;
+                width: 250px;
+                line-height: 4rem;
+                margin-bottom: 25px;
+            }
+
+            p{
+                align-self: flex-start;
+                color: var(--couleur-principal_sombre);
+            }
+        }
+
+        .moi-1{
+            height: 100%;
+        
+            img{
+                
+                align-self: stretch;
+                object-fit: cover;
+            }
+        }
+        
+    }
+
+
+
+    .partie-nouvelle-aventure{
+        display: flex;
+        position: relative;
+        justify-content: end;
+
+    }
+
+    .nouvelle-aventure{
+        display: flex;
+        position: relative;
+        width: 1200px;
+        background-color: var(--couleur-secondaire_claire);
+        border-radius: 15px;
+        margin: 100px;
+        padding: 25px;
+        box-shadow: 9px 11px 25px -10px #2525259f;
+        
+    
+        h2{
+            display: flex;
+            font-size: 4rem;
+            position: relative;            
+            line-height: 4rem;
+            padding: 5%;
+            align-self: flex-start;
+        }
+    
+
+        .photos{
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .ensemble-photos{
+            display: flex;
+            gap: 2rem;
+
+        
+
+
+            img{
+                width: 250px;
+                height: 250px;
+                border-radius: 15px;
+                object-fit:cover;
+            }
+        }
+    }
+
+    .cadre-lien-cv{
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 40px;
+    margin: 50px auto 25px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--couleur-principal_sombre);
+    border-radius: 35px;
+    box-shadow: 9px 11px 25px -10px #2525259f;
+
+        &:hover{
+            background-color: var(--couleur-secondaire);
+            }
+
+        &:hover .lien-cv{
+            color: var(--couleur-principal_sombre);
+            }
+    }
+
+    .lien-cv{
+            color: var(--couleur-secondaire_claire);
+        }
+
+}
+
+
+
+/* PARTIE FOOTER: */
+
+footer{
+
+    .droit-site{
+        display: block;
+        position:  relative;
+        color: var(--gris);
+        text-align: center;
+        font-size: 1rem;
+    }
+
+}

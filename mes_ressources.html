@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes ressources</title>
+    <!-- il faut trouver une fonts -->
+    <link rel="stylesheet" href="/asset/css/header.css">
+    <link href="asset/css/mesressources.css" rel="stylesheet">
+    <!-- on lie le html a la feuille de style css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Partie du header -->
+    <header>
+        <div class="fond-header">
+                        <!-- -------fond header au dessus-------- -->
+        </div>
+        <section class="menu">
+                <div class="home-bouton">
+                    <a href="/index.html">
+                        <span class="icon-home"></span>
+                    </a>
+                </div>
+                <div class="menu-nav">
+                    <div class="text-nav">
+                        <a href="/mon_cv.html" class="titre-menu">Mon CV</a>
+                        <a href="/mes_ressources.html" class="titre-menu">Mes Ressources</a>
+                        <a href="/mes_projets.html" class="titre-menu">Mes projets</a>
+                        <a href="/veille_technologique.html" class="titre-menu">Veille technologique</a>
+                        <a href="/me_contacter.html" class="titre-menu">Me contacter</a>
+                    </div>
+                    <div class="icon-social" target="_blank">
+                        <a href="">
+                            <span class="git">
+                        </a>
+                        <a href="https://www.linkedin.com/in/léo-adam" target="_blank">
+                            <span class="linkedin">
+                        </a>
+                    </div>
+                </div>    
+        </section>
+        <section>
+            <div class="titre-page">
+                <h1 class="accueil">Ressources</h1>
+            </div>
+        </section>
+    </header>
+
+<!-- Partie du main -->
+    <main>
+        <section>
+            <div class="entete">
+                <div>
+                    <h2>
+                        Technologies
+                    </h2>
+                    <p>
+                        Vous trouverez ci-dessous les technologies que j'apprends actuellement
+                    </p>
+                </div>
+            </div>
+            <div class="technos">
+                <div class="tech">
+                    <img src="/asset/img/techno/HTML.png" alt="image HTML">
+                    <img src="/asset/img/techno/CSS.png" alt="image CSS">
+                    <img src="/asset/img/techno/python.png" alt="image python">
+                    <img src="/asset/img/techno/javascript.png" alt="image javascript">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="entete">
+                <div>
+                    <h2>
+                        Mode opératoire
+                    </h2>
+                    <p>
+                        Vous trouverez ci-dessous les modes opératoires que j'ai réalisé lors de mon apprentissage
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="mode-ops">
+            <div class="mes-mode-ops">
+                    <div class="mode-op">
+                        <div class="icon-projet">
+                            <img src="asset/img/icon-docker.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="titre-projet">
+                                Docker
+                            </h3>
+                            <a href="/asset/ressources/Docker.pdf" target="_blank">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pres-modo-op">
+                        Ce document explique comment créer, lancer et gérer des conteneurs avec Docker Compose, ainsi que la structure d’un fichier docker-compose.yml. Il détaille aussi la mise en réseau entre conteneurs (notamment application + base de données) et l’utilisation des variables d’environnement pour configurer les connexions. Enfin, il montre des exemples concrets avec PostgreSQL et la configuration des networks.
+                    </div>
+                    <div class="mode-op">
+                        <div class="icon-projet">
+                            <img src="asset/img/incon-base-de-donnees.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="titre-projet">
+                                PhpMyAdmin
+                            </h3>
+                            <a href="/asset/ressources/PhpMyAdmin.pdf" target="_blank">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pres-modo-op">
+                        Ce document explique comment créer et gérer une nouvelle base de données et attribuer des droits utilisateurs via PhpMyAdmin, notamment pour plusieurs instances WordPress. Il aborde aussi la configuration réseau Docker nécessaire pour connecter correctement les services (ajout de networks). Enfin, il met en garde sur la gestion des permissions utilisateurs en cas d’erreur.
+                    </div>
+                    <div class="mode-op">
+                        <div class="icon-projet">
+                            <img src="asset/img/icon-ssh.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="titre-projet">
+                                Protocole SSH
+                            </h3>
+                            <a href="/asset/ressources/Protocole_SSH.pdf" target="_blank">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pres-modo-op">
+                        Guide pratique pour se connecter à distance à une machine via SSH. Explique les prérequis, les étapes de connexion (commande, acceptation de la clé, authentification), et comment se connecter à un container Docker via un port spécifique.
+                    </div>
+                    <div class="mode-op">
+                        <div class="icon-projet">
+                            <img src="asset/img/icon-github.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="titre-projet">
+                            Clé ssh / github et container
+                            </h3>
+                            <a href="/asset/ressources/ssh__github_et_container.pdf" target="_blank">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pres-modo-op">
+                        Tutoriel complet pour configurer une clé SSH et l'utiliser avec GitHub et Docker. Couvre la génération de la paire de clés, l'ajout sur GitHub, la configuration Git locale, la création d'un fichier config SSH, et la mise en place d'un container Apache avec déploiement automatique depuis GitHub via Docker Compose.
+                    </div>
+                    <div class="mode-op">
+                        <div class="icon-projet">
+                            <img src="asset/img/icon-wordpress.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="titre-projet">
+                                Wordpress
+                            </h3>
+                            <a href="/asset/ressources/wordpress.pdf" target="_blank">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pres-modo-op">
+                        Introduction à WordPress : ce que c'est, la différence entre WordPress.com (hébergé, simple) et WordPress.org (auto-hébergé, flexible), ce qu'on peut faire en frontend et en backend, ainsi que les avantages et inconvénients de la plateforme.
+                    </div>
+                    <div class="mode-op">
+                        <div class="icon-projet">
+                            <img src="asset/img/icon-moniteur.png" alt="">
+                        </div>
+                        <div>
+                            <h3 class="titre-projet">
+                                Installation d'une VM et FreeIPA
+                            </h3>
+                            <a href="/asset/ressources/Installation_dune_VM_et_config_de_FreeIPA.pdf" class="projet-click" target="_blank">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pres-modo-op">
+                        Ce document guide pas à pas la création d’une machine virtuelle sous VirtualBox, l’installation de Rocky Linux en mode serveur, puis la configuration réseau (IP fixe, hostname, SSH). Il détaille ensuite l’installation et la configuration complète de FreeIPA, incluant le firewall, DNS et Kerberos. L’objectif est de mettre en place un serveur d’authentification centralisé fonctionnel.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    
+    </main>
+
+    <!-- Partie du footer -->
+    <footer>
+        <section class="contact">
+
+        </section>
+        <section class="droit">
+            <p class="droit-site">
+                <i>©2026. All rights reserved. Réalisé par Léo ADAM - BTS SIO </i>
+            </p>
+        </section>
+    </footer>
+</body>

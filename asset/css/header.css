@@ -1,0 +1,163 @@
+:root{
+    /* mettre les couleurs du theme de mon site */
+    --white:#fff;
+    --black:#000;
+    --couleur-principal_sombre:#2d2e2ece;
+    --box-s:#2525259f;
+    --couleur-secondaire:#A8A8A8;
+    --couleur-secondaire_claire:#c7c7c7;
+    --gris: rgb(100, 100, 100);
+    --fond-site: #F2F2F2;
+}
+
+header{
+height: 200px;
+
+    .fond-header{
+        display: flex;
+        position: absolute;
+        z-index: -100;
+    }
+
+    .menu-nav {
+        display: flex;
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        width: 850px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: var(--couleur-principal_sombre);
+        align-items: center;
+        justify-content: end;
+        padding: 25px 50px;
+        box-shadow: 9px 11px 25px -10px #2525259f;
+        z-index: 10;
+
+        &:hover {
+            background-color: var(--couleur-secondaire_claire);
+            transition: background-color 0.3s ease;
+        }
+
+        &:hover .titre-menu {
+            color: var(--couleur-principal_sombre);
+        }
+
+        &:hover .git{
+            background-color: var(--couleur-principal_sombre);
+            transition: color 0.5s ease
+        }
+
+        &:hover .linkedin{
+            background-color: var(--couleur-principal_sombre);
+            transition: color 0.5s ease
+        }
+
+    }
+
+
+    .text-nav{
+        display: flex;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .titre-menu{
+        color: var(--couleur-secondaire_claire);
+        gap: 50px;
+
+        &:hover{
+            color: var(--white) !important;
+        }
+    }
+
+    .home-bouton {
+        display: flex;
+        position: fixed;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        left: 60px;
+        top: 55px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        background-color: var(--couleur-principal_sombre);
+        box-shadow: 9px 11px 25px -10px #2525259f;
+
+        &:hover{
+            background-color: var(--couleur-secondaire_claire);
+            transition: background-color 0.3s ease;
+        }
+
+        &:hover .icon-home{
+            background-color: var(--couleur-principal_sombre);
+        }
+    }
+
+    .icon-home {
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+        background-color: var(--couleur-secondaire_claire);
+        -webkit-mask: url('../img/icon-home.png') no-repeat center;
+        mask: url('../img/icon-home.png') no-repeat center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+    }
+
+
+    .icon-social{
+        display: flex;
+        position: absolute;
+        gap: 20px;
+    }
+
+    .linkedin{
+        display: block;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        background-color: var(--couleur-secondaire_claire);
+        -webkit-mask: url('../img/icon-linkedin.png') no-repeat center;
+        mask: url('../img/icon-linkedin.png') no-repeat center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+
+        &:hover{
+            background-color: var(--white) !important;
+        }
+    }
+
+    .git{
+        display: block;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        background-color: var(--couleur-secondaire_claire);
+        -webkit-mask: url('../img/icon-github.png') no-repeat center;
+        mask: url('../img/icon-github.png') no-repeat center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+
+        &:hover{
+            background-color: var(--white) !important;
+        }
+    }
+
+    .titre-page{
+        display: flex;
+        position: relative;
+        align-items: center;
+        height: 100px;
+        top: 30px;
+        padding-left: 200px;
+        text-transform: uppercase;
+        color: var(--couleur-principal_sombre);
+        z-index: -2;
+    }
+
+    .accueil{
+        font-size: 50px;
+    }
+}

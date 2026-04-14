@@ -1,0 +1,226 @@
+@import url('icons.css');
+
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* mettre les couleurs du theme de mon site */
+    --white:#fff;
+    --black:#000;
+    --couleur-principal_sombre:#2d2e2ece;
+    --box-s:#2525259f;
+    --couleur-secondaire:#A8A8A8;
+    --couleur-secondaire_claire:#c7c7c7;
+    --gris: rgb(100, 100, 100);
+    --fond-site: #F2F2F2;
+
+
+    /* C'est pour la taille du texte (plus simple pour les calculs rem) */
+    --base-px:10px;
+    --grid-gap:2rem;
+    --transition_time: 0.5s;
+}
+
+html{
+    font-size: var(--base-px);
+}
+
+body{
+    /* il faut trouver une fonts et les tailles */
+    font-family: 'poppins', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    font-weight: 400;
+    background: var(--fond-site);
+}
+
+a{
+    /* on enleve les traits sous les liens */
+    text-decoration: none;
+}
+
+img,
+video{
+    width: 100%;
+    height: 100%;
+}
+
+.poppins{
+    font-family: "poppins", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Pour le cadrillage de la page */
+.row{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:var(--grid-gap);
+}
+
+.col-1{
+    grid-column: span 1;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
+.col-3{
+    grid-column: span 3;
+}
+
+.col-4{
+    grid-column: span 4;
+}
+
+.col-5{
+    grid-column: span 5;
+}
+
+.col-6{
+    grid-column: span 6;
+}
+
+.col-7{
+    grid-column: span 7;
+}
+
+.col-8{
+    grid-column: span 8;
+}
+
+.col-9{
+    grid-column: span 9;
+}
+
+.col-10{
+    grid-column: span 10;
+}
+
+.col-11{
+    grid-column: span 11;
+}
+
+.col-12{
+    grid-column: span 12;
+}
+
+
+/* PARTIE HEADER: */
+/* Le header est dans le header.css */
+
+/* PARTIE MAIN: */
+
+main{
+    
+    h1,
+    h2{
+        color: var(--black);
+    }
+
+    .entete{
+        display: flex;
+        color: var(--couleur-principal_sombre);
+        justify-content: center;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .mes-mode-ops{
+        position: relative;
+        display: block;
+        margin-top: 50px;
+        margin-inline: 15%;
+        margin-bottom: 50px;
+    }
+
+    .pres-modo-op{
+        margin-bottom: 50px;
+    }
+
+    .mode-op{
+        position: relative;
+        display: flex;
+        height: 50px;
+        margin-block: 20px;
+        align-items: center;
+        background-color: var(--couleur-principal_sombre);
+        border-radius: 15px;
+        box-shadow: 9px 11px 25px -10px #2525259f;
+        color: var(--couleur-secondaire_claire);
+        width: fit-content;
+        padding-right: 50px;
+
+        &:hover{
+            background-color: var(--couleur-secondaire);
+            transition: background-color 0.3s ease;
+            color: var(--couleur-principal_sombre);
+            box-shadow: none;
+        }
+
+        .icon-projet{
+            display: flex;
+            position: relative;
+            height: 40px;
+            width: 40px;
+        }
+
+        a{
+            position: absolute;
+            inset: 0;          /* équivalent à top/right/bottom/left: 0 */
+            width: unset;      /* annule ton width: 100% existant */
+            border-radius: 15px;
+        }
+
+        h3{
+            display: flex;
+            position: relative;
+            align-items: center;
+        }
+
+        .icon-projet{
+            margin-left: 50px;
+            margin-right: 25px;
+        }
+
+    }
+
+    .technos{
+        display: flex;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .tech{
+        display: flex;
+        position: relative;
+        gap: 4rem;
+        width: 100%;
+        justify-content: center;
+        margin-top: 50px;
+        
+        img{
+            border-radius: 10px;
+            width: 250px;
+            justify-self: center;
+        }
+    }
+}
+    
+
+/* PARTIE FOOTER: */
+
+footer{
+
+    .droit-site{
+        color: var(--gris);
+        text-align: center;
+        font-size: 1rem;
+    }
+
+}

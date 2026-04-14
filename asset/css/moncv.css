@@ -1,0 +1,191 @@
+@import url('icons.css');
+
+*,::after,::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* mettre les couleurs du theme de mon site */
+    --white:#fff;
+    --black:#000;
+    --couleur-principal_sombre:#2d2e2ece;
+    --box-s:#2525259f;
+    --couleur-secondaire:#A8A8A8;
+    --couleur-secondaire_claire:#c7c7c7;
+    --gris: rgb(100, 100, 100);
+    --fond-site: #F2F2F2;
+
+
+    /* C'est pour la taille du texte (plus simple pour les calculs rem) */
+    --base-px:10px;
+    --grid-gap:2rem;
+    --transition_time: 0.5s;
+}
+
+html{
+    font-size: var(--base-px);
+}
+
+body{
+    /* il faut trouver une fonts et les tailles */
+    font-family: '##', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2.7rem;
+    font-weight: 400;
+    background: var(--fond-site);
+}
+
+a{
+    /* on enleve les traits sous les liens */
+    text-decoration: none;
+}
+
+img,
+video{
+    width: 100%;
+    height: 100%;
+}
+
+.gelasio{
+    font-family: "Gelasio", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Pour le cadrillage de la page */
+.row{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap:var(--grid-gap);
+}
+
+.col-1{
+    grid-column: span 1;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
+.col-3{
+    grid-column: span 3;
+}
+
+.col-4{
+    grid-column: span 4;
+}
+
+.col-5{
+    grid-column: span 5;
+}
+
+.col-6{
+    grid-column: span 6;
+}
+
+.col-7{
+    grid-column: span 7;
+}
+
+.col-8{
+    grid-column: span 8;
+}
+
+.col-9{
+    grid-column: span 9;
+}
+
+.col-10{
+    grid-column: span 10;
+}
+
+.col-11{
+    grid-column: span 11;
+}
+
+.col-12{
+    grid-column: span 12;
+}
+
+
+/* PARTIE HEADER: */
+
+/* Le header est dans le header.css */
+
+
+/* PARTIE MAIN: */
+
+main{
+
+    h1,
+    h2{
+        color: var(--black);
+    }
+
+
+    .lecv{
+        display: flex;
+        position: relative;
+        height: 1000px;
+        margin-inline: 5%;
+
+        img{
+        
+        object-fit: contain;
+        }
+    }
+
+    .telecharger-cv{
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        gap: 25px;
+        bottom: 10%;
+        right: 5%;
+
+    }
+
+    .dl{
+        display: flex;
+        position: relative;
+        height: 50px;
+        width: 250px;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--couleur-secondaire);
+        border-radius: 25px;
+        color: var(--couleur-principal_sombre);
+        box-shadow: 9px 11px 25px -10px #2525259f;
+
+        &:hover{
+            background-color: var(--couleur-secondaire_claire);
+            box-shadow: none;
+        }
+
+        &:hover .lien-cv{
+            color: var(--couleur-principal_sombre);
+        }
+
+        a{
+            position: absolute;
+            inset: 0;          /* équivalent à top/right/bottom/left: 0 */
+            width: unset;      /* annule ton width: 100% existant */
+            border-radius: 15px;
+        }
+    }
+
+}
+/* PARTIE FOOTER: */
+
+footer{
+
+    .droit-site{
+        color: var(--gris);
+        text-align: center;
+        font-size: 1rem;
+    }
+
+}
