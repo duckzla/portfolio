@@ -163,6 +163,7 @@ main{
         &:hover{
             background-color: var(--couleur-secondaire_claire);
             box-shadow: none;
+            scale: 1.025;
         }
 
         &:hover .lien-cv{
