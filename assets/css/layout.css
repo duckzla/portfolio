@@ -1,0 +1,215 @@
+/* =========================================================
+    layout.css : la charpente commune
+    header, titres avec ombre, footer
+
+    Sommaire
+    1. Header
+    2. Titres avec ombre
+    3. Footer
+    4. Responsive
+   ========================================================= */
+
+
+/* ---------- 1. Header ---------- */
+
+/* on met  header et .burger car c'est plus fort que juste .burger, et ça evite le conflit. on a donc bien le none. */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--gap);
+
+    .logo {
+    position: relative;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 34px;
+    padding: 0.5rem 1rem;
+    }
+
+    .nav {
+        display: flex;
+    }
+
+    .nav__list {
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+
+        li:hover {
+            color: var(--sun);
+        }
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .burger__close {
+        display: none;
+    }
+
+    .nav__extra {
+        display: none;
+    }
+
+    &.is-open .burger__open {
+        display: none;
+    }
+
+    &.is-open .burger__close {
+        display: block;
+    }
+}
+
+
+/* ---------- 2. Titres avec ombre ---------- */
+
+.titre_sh_ink {
+    text-shadow: 6px 6px 0 var(--ink);
+}
+
+.titre_sh_sun {
+    text-shadow: 6px 6px 0 var(--sun);
+}
+
+
+/* ---------- 3. Footer ---------- */
+
+footer {
+    display: block;
+    background-color: var(--sun);
+
+    h2{
+        color: var(--ink);
+    }
+
+    p{
+        font-size: 10px;
+    }
+
+    .btn {
+        margin-bottom: 5px;
+    }
+
+    .footer_big {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .separator {
+        height: 5px;
+        width: 100%;
+        background-color: var(--ink);
+    }
+
+    .footer_content {
+        display: flex;
+        flex-direction: column;
+        margin-inline: var(--gutter);
+        gap: 10px;
+    }
+
+    .legale {
+        display: flex;
+        background-color: var(--ink);
+        color: var(--paper);
+        height: 30px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
+/* =========================================================
+    4. Responsive
+   ========================================================= */
+
+/* ---------- Mobile (≤ 720px) ---------- */
+@media (max-width: 720px) {
+
+    /* --- Header et menu burger --- */
+    header {
+        .logo {
+            z-index: 20;
+        }
+
+        .burger {
+            display: inline-flex;
+            position: relative;
+            z-index: 20;
+        }
+
+        /* --- menu FERMÉ (par défaut) --- */
+        .nav {
+            display: none;
+        }
+
+        /* --- menu OUVERT --- */
+        &.is-open .nav {
+            display: block;
+            position: fixed;
+            inset: 0;
+            background-color: var(--ink);
+            padding: 140px var(--gutter) 28px;
+            overflow-y: auto;
+            z-index: 10;
+        }
+
+        &.is-open .nav__list {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 0;
+            counter-reset: menu;
+        }
+
+        &.is-open .nav__list li{
+                border-top: 2px solid var(--paper);
+            }
+
+        &.is-open .nav a:not(.btn) {
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+            padding: 14px 0;
+            font-family: var(--font-display);
+            font-size: var(--fs-h3);
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        &.is-open .nav a:not(.btn)::before {
+            counter-increment: menu;
+            content: "0" counter(menu); width: 24px;
+            font-family: var(--font-body);
+            font-size: var(--fs-label);
+            font-weight: 700;
+            color: #9a9a9a;
+        }
+
+        &.is-open .nav__list li:nth-last-child(2){
+            border-bottom: 2px solid var(--paper);
+        }
+
+        &.is-open .nav__list li:last-child{
+            margin-top: var(--gap);
+            border-top: none;
+        }
+
+        &.is-open .nav__extra {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+            gap: 25%;
+        }
+    }
+
+    /* --- Contenu masqué quand le menu est ouvert --- */
+    main{
+        &.menu-is-open   {
+            display: none;
+        }
+    }
+}

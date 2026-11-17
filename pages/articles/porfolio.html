@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - Léo Adam - projet portfolio</title>
+    <meta name="description" content="Page d'accueil du portfolio">
+
+    <!-- Polices utilisées -->
+    <link rel="preload" href="../../assets/fonts/big-shoulders-display-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../../assets/fonts/instrument-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- CSS, ne pas changer l'ordre -->
+    <link rel="stylesheet" href="../../assets/css/variables.css">
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/components.css">
+    <link rel="stylesheet" href="../../assets/css/pages.css">
+
+    <!-- JS avec defer -->
+    <script src="../../assets/js/main.js" defer></script>
+</head>
+<body>
+    <header>
+        
+        <a href="../../index.html" class="logo">LÉO.A</a>
+
+        <button class="burger btn btn--sun" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"> 
+            <img src="../../assets/icons/menu.svg" class="burger__open" alt=""> 
+            <img src="../../assets/icons/close.svg" class="burger__close" alt="">
+        </button>
+
+        <nav id="menu" class="nav" aria-label="Navigation principale">
+            <ul class="nav__list">
+                <li><a href="../../pages/projets.html">Projets</a></li>
+                <li><a href="../../pages/cv.html">CV</a></li>
+                <li><a href="../../pages/ressources.html">Ressources</a></li>
+                <li><a href="../../pages/veille.html">Veille</a></li>
+                <li><a href="../../pages/contact.html" class="btn btn--sun">Me contacter</a></li>
+            </ul>
+
+            <div class="nav__extra">
+                <a class="btn btn--ink" href="https://www.linkedin.com/in/léo-adam" aria-label="LinkedIn" target="_blank">
+                    <span class="icone icone--linkedin"></span>
+                </a>
+                <a class="btn btn--ink" href="https://github.com/duckzla" aria-label="Github" target="_blank">
+                    <span class="icone icone--github"></span>
+                </a>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section class="entete_image">
+            <div class="entete">
+                <p> 
+                    <a class="label" href="../../pages/projets.html" aria-label="lien vers page projet">Projet </a>/ Ce portfolio
+                </p>
+                <h2 class="titre_sh_ink">
+                Ce <br>portfolio
+                </h2>
+                <p class="pres_page"> 
+                    Comment ce site est construit: sans framework avec du HTML, CSS, Javascript et hébergé sur Github Pages.
+                </p>
+                <div class="double_btn">
+                    <div class="btn btn--sun div_link">
+                        <span class="icone icone--github">
+                        </span>
+                        <p>
+                            Voir le code sur GitHub
+                        </p>
+                        <a class="_link" href="https://github.com/duckzla/portfolio" target="_blank" aria-label="Github"></a>
+                    </div>
+                    <div class="btn btn--neutre div_link">
+                        <span class="icone icone--arrow-r" aria-hidden="true"></span>
+                        <p>
+                            Tous les projets
+                        </p>
+                        <a class="_link" href="../../pages/projets.html" aria-label="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="espace_proj_port">
+                <div class="img_portfolio_pivot card card__media">
+                    <img class="white_border" src="../../assets/img/portfolio_home.png" alt="">
+                    <p class="label">Index.html</p>
+                </div>
+                
+            </div>
+        </section>
+        <section class="section">
+            <div class="margin_bot">
+                <h2 class="titre_sh_ink">Direction Atistique</h2>
+                <p>Néo-brutaliste</p>
+            </div>
+            <div>
+                <div class="img_border_shad">
+                    <img src="../../assets/img/DA_portfolio.png" alt="DA du portfolio">
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="margin_bot titre_sh_ink">
+                Architecture
+            </h2>
+            <div class="section">
+            <div class="stat_portfolio">
+                <div class="stat b--sun">
+                    <h3>
+                        10
+                    </h3>
+                    <p>
+                        Pages HTML
+                    </p>
+                </div>
+                <div class="stat">
+                    <h3>
+                        Sans
+                    </h3>
+                    <p>
+                        Frameworks
+                    </p>
+                </div>
+                <div class="stat">
+                    <h3>    
+                        1
+                    </h3>
+                    <p>
+                        Page JS
+                    </p>
+                </div>
+                <div class="stat">
+                    <h3>
+                        34
+                    </h3>
+                    <p>
+                        icônes SVG
+                    </p>
+                </div>
+            </div>
+        </div>
+            <div class="liste_css gap">
+                <div class="img_fit">
+                    <img class="img_border_shad--sun img_archi" src="../../assets/img/architecture.png" alt="">
+                    <div class="btn_ligne">
+                        <div class="js_card">
+                            <span class="icone icone--terminal c--sun"></span>
+                            <p>
+                                main.js est chargé en defer. Il ouvre le menu mobile en ajoutant la classe .is-open au header.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex_col">
+                    <p class="label">
+                        ORDRE DE CHARGEMENT DU CSS:
+                    </p>
+                    <div>
+                        <div class="stat flex_gap">
+                            <div>
+                                <h3>1</h3>
+                            </div>
+                            <div>
+                                <p class="lead">
+                                    Varibles
+                                </p>
+                                <p>
+                                    Couleurs, polices, tailles, bordures, ombres
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="stat flex_gap">
+                            <div>
+                                <h3>2</h3>
+                            </div>
+                            <div>
+                                <p class="lead">
+                                    Base
+                                </p>
+                                <p>
+                                    Setup de base, typo, style des balises
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="stat flex_gap">
+                            <div>
+                                <h3>3</h3>
+                            </div>
+                            <div>
+                                <p class="lead">
+                                    layout
+                                </p>
+                                <p>
+                                    Header,menu burger, footer
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="stat flex_gap">
+                            <div>
+                                <h3>4</h3>
+                            </div>
+                            <div>
+                                <p class="lead">
+                                    components
+                                </p>
+                                <p>
+                                    Boutons, tags, cates, icones
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="stat flex_gap">
+                            <div>
+                                <h3>5</h3>
+                            </div>
+                            <div>
+                                <p class="lead">
+                                    pages
+                                </p>
+                                <p>
+                                    Une partie par page, responsive
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="flex_gap superposi_tag margin_bot">
+                <h2 class="titre_sh_ink">Plan du site</h2>
+                <div class="tag_portfolio">
+                    <h3 class="label">portfolio</h3>
+                </div>
+            </div>
+            <img class="img_border_shad" src="../../assets/img/plan_du_site.png" alt="plan du site">
+        </section>
+        <section class="section">
+            <div class="margin_bot">
+                <h2 class="titre_sh_ink">Sous le capot</h2>
+            </div>
+            <div class="pres_code">
+                    <!-- carte fiches techniques -->
+                    <div class="pres_proj card card--sun ">
+                        <!-- entete de la carte -->
+                        <div class="card__top">
+                            <div class="blue-b icon-box">
+                                <span class="icone icone--file "></span>
+                            </div>
+                        </div>
+                        <div class="content-date">
+                            <h3>carte cliquable</h3>
+                            <p>Un lien vide <code>._link </code>en <code>position: absolute</code> et <code>inset: 0</code> pour couvrir tout le block en <code>.div_link</code>.</p>
+                        </div>
+                    </div>
+                    <!-- carte petite présentation -->
+                    <div class="pres_proj card card__media">
+                        <!-- entete de la carte -->
+                        <div class="card__top">
+                            <div class="blue-b icon-box">
+                                <span class="icone icone--star "></span>
+                            </div>
+                        </div>
+                        <div class="content-date">
+                            <h3>Bandeau infini</h3>
+                            <p> Deux groupes identiques qui défilent avec <code>@keyframes</code> de 0 à -50%, penchés avec <code>rotate: -1.5deg</code>.</p>
+                        </div>                        
+                    </div>
+                    <!-- carte petite présentation -->
+                    <div class="pres_proj card card__media">
+                        <!-- entete de la carte -->
+                        <div class="card__top">
+                            <div class="blue-b icon-box">
+                                <span class="icone icone--zap "></span>
+                            </div>
+                        </div>
+                        <div class="content-date">
+                            <h3>titres fluides</h3>
+                            <p>Les tailles de titre en <code>clamp()</code>et les polices en <code>.woff2</code> hébergées avec le site.
+                            </p>
+                        </div>                        
+                    </div>
+                    <!-- carte fiches techniques -->
+                    <div class="pres_proj card card--sun ">
+                        <!-- entete de la carte -->
+                        <div class="card__top">
+                            <div class="blue-b icon-box">
+                                <span class="icone icone--file "></span>
+                            </div>
+                        </div>
+                        <div class="content-date">
+                            <h3>Icônes en mask</h3>
+                            <p>Le SVG sert de masque (<code>mask: var(--icone)</code>) et la couleur vient de <code>currentColor</code>. Une icône prend la couleur de son bouton.
+                            </p>
+                        </div>
+                    </div>
+                    
+        </section>
+
+
+
+
+
+    </main>
+    <footer>
+        <div class="footer_big">
+            <div class="separator">
+            </div>
+            <div class="footer_content">
+                <h2>
+                    on en parle?
+                </h2>
+                <div>
+                    <div class="btn btn--ink">
+                        <span class="icone icone--mail" aria-hidden="true" ></span>
+                        <p>
+                            l14.adm@gmail.com
+                        </p>
+                    </div>
+                    <div class="btn div_link">
+                        <span class="icone icone--github">
+                        </span>
+                        <p>
+                            Github
+                        </p>
+                        <a class="_link" href="https://github.com/duckzla" target="_blank" aria-label="Github"></a>
+                    </div>
+                    <div class="btn div_link">
+                        <span class="icone icone--linkedin" aria-hidden="true"></span>
+                        <p>
+                            Linkedin
+                        </p>
+                        <a class="_link" href="https://www.linkedin.com/in/léo-adam" target="_blank" aria-label="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="legale">
+                <p><i>©2026. All rights reserved. Réalisé par Léo ADAM - BTS SIO</i></p>
+            </div>
+        </div>
+    </footer>
+</body>

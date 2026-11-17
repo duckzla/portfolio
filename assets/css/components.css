@@ -1,0 +1,410 @@
+/* =========================================================
+    components.css : les briques réutilisables
+    Boutons, tags, cartes, icônes, chiffres clés, textes, mise en page.
+    Aucun composant ne gère sa marge extérieure.
+
+    Sommaire
+    1.  Boutons
+    2.  Tags
+    3.  Cartes
+    4.  Icon-box
+    5.  Icônes (masque SVG)
+    6.  Chiffres clés
+    7.  Lien sur toute une div
+    8.  En-têtes de page
+    9.  Couleurs utilitaires
+    10. Textes
+    11. Mise en page et espacements
+    12. Images
+    13. Blocs de contenu
+    14. Séparateur
+    15. Responsive
+   ========================================================= */
+
+
+/* ---------- 1. Boutons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 20px;
+    background: var(--paper);
+    color: var(--ink);
+    border: var(--border);
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: transform 0.12s, box-shadow 0.12s;
+}
+
+.btn--sun {
+    background: var(--sun);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn--neutre {
+    box-shadow: var(--shadow-sm);
+}
+
+.btn--ink {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+/* Effet « bouton physique » */
+.btn:hover {
+    transform: translate(-2px, -2px);
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+
+/* ---------- 2. Tags ---------- */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    padding: 4px 10px;
+    border: 2px solid currentColor;
+    font-size: var(--fs-label);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+
+/* ---------- 3. Cartes ---------- */
+
+.card__contact {
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    color: var(--ink);
+    border: var(--border);
+    box-shadow: var(--shadow);
+    transition: transform 0.12s, box-shadow 0.12s;
+}
+
+/* Effet « bouton physique » sur la carte contact */
+.card__contact:hover {
+    transform: translate(-2px, -2px);
+}
+
+.card__contact:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    color: var(--ink);
+    border: var(--border);
+    box-shadow: var(--shadow);
+}
+
+.card_content {
+    display: flex;
+    flex-direction: column;
+    margin-block: 15px;
+    gap: 10px;
+
+    p {
+        padding-inline: 15px;
+    }
+}
+
+.card--sun {
+    background: var(--sun);
+    padding: 20px;
+}
+
+.card__media {
+    padding: 20px;
+    background: var(--mist);
+    border-bottom: var(--border);
+}
+
+.card__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 28px;
+}
+
+.card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Le bouton descend toujours en bas de la carte */
+.card .btn {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+/* Sur fond jaune, le contour de focus jaune serait invisible */
+.card--sun :focus-visible {
+    outline-color: var(--ink);
+}
+
+.white_border {
+    border: solid;
+    border-color: var(--paper);
+}
+
+
+/* ---------- 4. Icon-box ---------- */
+.icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--cobalt);
+    color: var(--paper);
+    border: var(--border);
+}
+
+.card--sun .icon-box {
+    background: var(--paper);
+    color: var(--ink);
+}
+
+
+/* ---------- 5. Icônes (masque SVG) ---------- */
+
+/* Base icone, ça prendra la couleur du btn */
+.icone {
+    display: inline-block;
+    width: 1.2em;
+    height: 1.2em;
+    background-color: currentColor;
+    mask: var(--icone) no-repeat center / contain;
+}
+
+/* choix de l'icone */
+.icone--mail     { --icone: url("../icons/mail.svg"); }
+.icone--github   { --icone: url("../icons/github.svg"); }
+.icone--linkedin { --icone: url("../icons/linkedin.svg"); }
+.icone--map-pin { --icone: url("../icons/map-pin.svg");}
+.icone--code { --icone: url("../icons/code.svg");}
+.icone--calendar { --icone: url("../icons/calendar.svg");}
+.icone--star { --icone: url("../icons/star.svg");}
+.icone--layers { --icone: url("../icons/layers.svg");}
+.icone--file { --icone: url("../icons/file.svg");}
+.icone--arrow-r { --icone: url("../icons/arrow-right.svg");}
+.icone--arrow-up-r { --icone: url("../icons/arrow-up-right.svg");}
+.icone--zap { --icone: url("../icons/zap.svg");}
+.icone--extension { --icone: url("../icons/extension.svg");}
+.icone--play { --icone: url("../icons/play.svg");}
+.icone--rss { --icone: url("../icons/rss.svg");}
+.icone--file-pdf { --icone: url("../icons/file-pdf.svg");}
+.icone--terminal { --icone: url("../icons/terminal.svg");}
+
+
+/* ---------- 6. Chiffres clés ---------- */
+.stat {
+    padding: 24px;
+    background: var(--paper);
+    color: var(--ink);
+    border: var(--border);
+}
+
+.b--sun {
+    background: var(--sun);
+}
+
+.stat strong {
+    display: block;
+}
+
+
+/* ---------- 7. Lien sur toute une div ---------- */
+.div_link {
+    position: relative;
+}
+
+._link {
+    position: absolute;
+    inset: 0;
+}
+
+
+/* ---------- 8. En-têtes de page ---------- */
+
+.entete {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: var(--gap);
+}
+
+.entete_image {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* ---------- 9. Couleurs utilitaires ---------- */
+.h2--sun {
+    color: var(--sun);
+}
+
+.blue-b {
+    background-color: var(--cobalt);
+}
+
+.blue-c {
+    color: var(--cobalt);
+}
+
+.c--sun {
+    color: var(--sun);
+}
+
+
+/* ---------- 10. Textes ---------- */
+.label {
+    font-size: var(--fs-label);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.lead {
+    max-width: 560px;
+    font-size: var(--fs-lead);
+    font-weight: 500;
+}
+
+.text_gras {
+    font-size: var(--fs-lead);
+    font-weight: 1000;
+    letter-spacing: 0.05em;
+}
+
+
+/* ---------- 11. Mise en page et espacements ---------- */
+
+.section {
+    margin-block: var(--section);
+}
+
+.flex_gap {
+    display: flex;
+    gap: var(--gap);
+}
+
+.flex_col {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.gap {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.margin_bot {
+    margin-bottom: var(--margin);
+}
+
+
+/* ---------- 12. Images ---------- */
+
+.img_border_shad {
+    color: var(--ink);
+    border: var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.img_border_shad--sun {
+    color: var(--ink);
+    border: var(--border);
+    box-shadow: var(--shadow--sun);
+}
+
+.img_fit {
+    img{
+        width: 100%;
+    }
+}
+
+
+/* ---------- 13. Blocs de contenu ---------- */
+
+.pres_page {
+    max-width: 400px;
+}
+
+.liste_content {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    padding-inline: 25px;
+
+    span {
+        min-width: 1.2em;
+        min-height: 1.2em;
+    }
+}
+
+.pres_stage {
+    display: flex;
+    justify-content: center;
+
+    div {
+        max-width: 800px;
+    }
+}
+
+.double_btn {
+    display: flex;
+    gap: var(--gap);
+}
+
+
+/* ---------- 14. Séparateur ---------- */
+
+.separateur {
+    height: 2px;
+    background-color: var(--ink);
+}
+
+
+/* =========================================================
+    15. Responsive
+   ========================================================= */
+
+/* ---------- Mobile (≤ 720px) ---------- */
+@media (max-width: 720px) {
+
+    /* --- Blocs de contenu --- */
+    .pres_stage {
+        flex-direction: column;
+    }
+
+    /* --- En-têtes de page --- */
+    .entete_image {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* --- Mise en page et espacements --- */
+    .margin_bot {
+        margin-bottom: var(--gap);
+    }
+}

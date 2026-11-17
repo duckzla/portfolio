@@ -1,0 +1,103 @@
+/* =========================================================
+    base.css
+    Polices, reset, style des balises, accessibilité.
+    Pas de composants ici.
+
+    Sommaire
+    1. Polices
+    2. Reset
+    3. Page
+    4. Titres
+    5. Éléments
+   ========================================================= */
+
+
+/* ---------- 1. Polices ---------- */
+@font-face {
+    font-family: "Big Shoulders Display";
+    src: url("../fonts/big-shoulders-display-700.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Big Shoulders Display";
+    src: url("../fonts/big-shoulders-display-900.woff2") format("woff2");
+    font-weight: 900;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Instrument Sans";
+    src: url("../fonts/instrument-sans-400.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Instrument Sans";
+    src: url("../fonts/instrument-sans-500.woff2") format("woff2");
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Instrument Sans";
+    src: url("../fonts/instrument-sans-600.woff2") format("woff2");
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Instrument Sans";
+    src: url("../fonts/instrument-sans-700.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
+
+/* ---------- 2. Reset ---------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ---------- 3. Page ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    flex: 1;
+    margin: var(--gutter);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    background: var(--cobalt);
+    color: var(--paper);
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: 1.55;
+    overflow-x: clip;
+}
+
+
+/* ---------- 4. Titres ---------- */
+h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.9;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+
+
+/* ---------- 5. Éléments ---------- */
+p   { padding: 0;}
+a   { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+ul  { list-style: none; }
+code { background-color: gainsboro; border-radius: 5px;padding: 2px;opacity: 0.8;}

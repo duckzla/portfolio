@@ -1,0 +1,576 @@
+/* =========================================================
+    pages.css : les styles propres à chaque page
+
+    Sommaire
+    1. Accueil
+    2. Projets
+    3. CV
+    4. Ressources
+    5. Veille
+    6. Contact
+    7. Pages de stage
+    8. Page projet « portfolio »
+    9. Responsive
+   ========================================================= */
+
+
+/* =========================================================
+    1. Accueil
+   ========================================================= */
+
+/* ---------- Présentation ---------- */
+.presentation {
+    max-width: 450px;
+}
+
+.redirection {
+    display: flex;
+    gap: var(--gap);
+}
+
+/* ---------- Bandeau défilant ---------- */
+
+.bandeau-wrap {
+    margin-inline: calc(-1 * var(--gutter)); /* annule la marge de main, pile la largeur de l'écran */
+    margin-block: var(--gutter);
+    overflow-x: clip; /* coupe à gauche et à droite, laisse dépasser en haut et en bas */
+}
+
+.bandeau {
+    display: flex;
+    align-items: center;
+    background-color: var(--ink);
+    width: 110%;
+    margin-inline: -5%; /* 110 % centré : 5 % qui dépasse de chaque côté */
+    overflow-x: hidden;
+    height: 50px;
+    rotate: -1.5deg;
+}
+
+.bandeau-piste {
+    display: flex;
+    flex-shrink: 0; /* empêche le flex du bandeau de compresser la piste */
+    width: max-content;
+    animation: defile 30s linear infinite;
+}
+
+.bandeau-groupe {
+    display: flex;
+    flex-shrink: 0;
+    font-family: var(--font-display);
+    font-weight: 800;
+    gap: var(--gap);
+    align-items: center;
+    text-transform: uppercase;
+    margin-right: var(--gap);
+}
+
+@keyframes defile {
+    0% { transform: translateX( 0% ); }
+    100% { transform: translateX( -50% ); }
+}
+
+.star {
+    display: flex;
+    color: var(--sun);
+}
+
+/* ---------- Projets récents ---------- */
+
+.proj_pres {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.projets_resum {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-top: var(--gutter);
+    gap: 20px;
+}
+
+.pres_small {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.pres_proj {
+    gap: 10px;
+}
+
+.tous_proj {
+    margin-block: var(--gap) ;
+    width: fit-content;
+    justify-content: center;
+}
+
+/* ---------- Parcours (avant le BTS) ---------- */
+
+.before_info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+}
+
+.cadre_photo_chir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo_chir {
+    max-width: 450px;
+    max-height: auto;
+    object-fit: cover;
+    color: var(--ink);
+    border: var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.pres_before {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+
+/* =========================================================
+    2. Projets
+   ========================================================= */
+
+.projet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.outils_use {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.outil_use {
+    margin-bottom: var(--gap);
+}
+
+.btn_ligne {
+    display: flex;
+    gap: var(--gap);
+    margin-top: var(--gap);
+}
+
+.list_tag {
+    display: flex;
+    position: relative;
+    left: -5px;
+}
+
+.technos_tag {
+    gap: 10px;
+    margin: 40px;
+}
+
+.img_portfolio {
+    background-color: var(--ink);
+    justify-content: center;
+}
+
+
+/* =========================================================
+    3. CV
+   ========================================================= */
+
+.cv_dl {
+    max-width: fit-content;
+}
+
+.cv {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--gap);
+}
+
+.recap_cv {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    gap: var(--gap);
+}
+
+.compet {
+    margin-top: 15px;
+}
+
+.categorie {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.content-date {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 5px;
+}
+
+
+/* =========================================================
+    4. Ressources
+   ========================================================= */
+
+.tableau_compet {
+    margin: var(--gap);
+
+    .switch_side {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+.tableau_u5{
+    max-height: fit-content;
+}
+
+.mode-ops {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: var(--gutter);
+    gap: 40px;
+}
+
+
+/* =========================================================
+    5. Veille
+   ========================================================= */
+
+.pres_veille {
+    display: flex;
+    gap: var(--gap);
+    margin-block: var(--gutter);
+    margin: var(--gap);
+    justify-content: center;
+}
+
+.extensions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-block: var(--gap);
+    gap: 20px;
+}
+
+.evolution_vs {
+    display: flex;
+    flex-direction: column;
+    margin-block: var(--gutter);
+    gap: var(--gap);
+}
+
+/* ---------- Sources ---------- */
+
+.sources {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: var(--gutter);
+}
+
+.source_vs{
+    display: flex;
+    height: fit-content;
+    gap: var(--gap);
+}
+
+.source_autre {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.sources_part {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+
+/* =========================================================
+    6. Contact
+   ========================================================= */
+
+.contact {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.local-ping {
+    display: flex;
+    margin: var(--gap);
+    gap: 15px;
+}
+
+
+/* =========================================================
+    7. Pages de stage
+   ========================================================= */
+
+.pres_protocoles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gutter);
+}
+
+.liste_mission {
+    display: flex;
+    flex-direction: column;
+    list-style: inside;
+    gap: 10px;
+}
+
+
+/* =========================================================
+    8. Page projet « portfolio »
+   ========================================================= */
+
+.superposi_tag {
+    display: flex;
+    align-items: center;
+}
+
+.tag_portfolio {
+    display: flex;
+    position: relative;
+    background-color: var(--sun);
+    color: var(--ink);
+    height: fit-content;
+    border: 3px solid currentColor;
+    border-color: var(--ink);
+    rotate: -10deg;
+
+
+    h3 {
+        font-size: 75px;
+        padding: 5px;
+    }
+}
+
+.espace_proj_port {
+    display: flex;
+    padding: var(--gutter);
+    height: fit-content;
+    justify-content: center;
+}
+
+.img_portfolio_pivot {
+    background-color: var(--ink);
+    justify-content: center;
+    width: 100%;
+    rotate: 2deg;
+
+    p {
+        color: var(--paper);
+        margin-top: 10px;
+    }
+}
+
+.stat_portfolio {
+    display: flex;
+    gap: var(--gap);
+    justify-content: center;
+}
+
+.liste_css {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: var(--gap);
+    align-items: center;
+
+    .img_archi {
+        max-width: 950px;
+    }
+}
+
+.js_card {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 0 20px;
+    background: var(--ink);
+    color: var(--paper);
+    border: var(--border);
+
+    span {
+        min-width: 48px;
+    }
+}
+
+.pres_code {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+    justify-self: center;
+
+    .pres_proj {
+        max-width: 500px;
+    }
+}
+
+
+/* =========================================================
+    9. Responsive
+   ========================================================= */
+
+/* ---------- petit laptop (≤ 768px) ---------- */
+@media (max-width: 1024px) {
+
+        /* --- 1. Ressources --- */
+    .tableau_compet {
+        margin: 0;
+    }
+
+    .mode-ops {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+}
+
+/* ---------- Tablette et mobile (≤ 768px) ---------- */
+@media (max-width: 720px) {
+
+    /* --- 1. Accueil --- */
+    .proj_pres {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    .projets_resum {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pres_big {
+        margin-bottom: var(--gap);
+    }
+
+    .before_info {
+        margin-top: var(--gap);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photo_chir {
+        max-width: 275px;
+    }
+
+    /* --- 2. Projets --- */
+    .projet {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .outils_use {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn_ligne {
+        flex-direction: column;
+    }
+
+    .list_tag{
+        left: 0;
+        top: -5px;
+
+        h3 {
+            line-height: 35px;
+        }
+    }
+
+    .technos_tag {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+    }
+
+    /* --- 3. CV --- */
+    .cv {
+        grid-template-columns: 1fr;
+    }
+
+    .compet {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .categorie {
+        gap: 10px;
+    }
+
+    /* --- 4. Ressources --- */
+    .tableau_compet {
+        margin: 0;
+    }
+
+    .mode-ops {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* --- 5. Veille --- */
+    .pres_veille {
+        flex-direction: column;
+    }
+
+    .extensions {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sources {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+    }
+
+    /* --- 6. Contact --- */
+    .contact {
+    grid-template-columns: 1fr;
+    }
+
+    /* --- 7. Pages de stage --- */
+    .pres_protocoles {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* --- 8. Page projet « portfolio » --- */
+    .stat_portfolio {
+        flex-direction: column;
+        max-width: fit-content;
+        justify-self: center;
+    }
+
+    .superposi_tag {
+        flex-direction: column;
+        align-items: start;
+
+        h3 {
+            font-size: 35px;
+        }
+    }
+
+    .pres_code {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .liste_css {
+        display: flex;
+        flex-direction: column;
+    }
+}

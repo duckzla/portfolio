@@ -1,0 +1,60 @@
+/* =========================================================
+    variables.css : DA « Cobalt »
+    Seules les valeurs réutilisées à plusieurs endroits.
+
+    Sommaire
+    1. Couleurs
+    2. Polices
+    3. Tailles de texte
+    4. Bordures et ombres
+    5. Mise en page
+    6. Responsive
+   ========================================================= */
+
+:root {
+    /* ---------- 1. Couleurs ---------- */
+    --cobalt: #2438FF;
+    --sun:    #FFE347;
+    --ink:    #0A0A0A;
+    --paper:  #FFFFFF;
+    --mist:   #F4F1F8;
+
+    /* ---------- 2. Polices ---------- */
+    --font-display: "Big Shoulders Display", "Arial Narrow", sans-serif;
+    --font-body:    "Instrument Sans", system-ui, sans-serif;
+
+    /* ---------- 3. Tailles de texte ---------- */
+    --fs-h1:    clamp(68px, 11vw, 168px);  /* titre de page */
+    --fs-h2:    clamp(56px, 8.5vw, 124px); /* titre de section */
+    --fs-h3:    40px;                      /* titre de carte */
+    --fs-lead:  21px;                      /* texte d'intro */
+    --fs-body:  17px;                      /* texte courant */
+    --fs-label: 13px;                      /* labels, tags */
+
+    /* ---------- 4. Bordures et ombres ---------- */
+    --border:         3px solid var(--ink);
+    --shadow:         10px 10px 0 var(--ink);
+    --shadow--sun:    10px 10px 0 var(--sun);
+    --shadow-sm:      4px 4px 0 var(--ink);
+
+    /* ---------- 5. Mise en page ---------- */
+    --gutter:  80px;   /* marges gauche/droite*/
+    --section: 96px;   /* espace haut/bas des sections */
+    --gap:     28px;   /* espace entre cartes, laisse la place aux ombres */
+    --margin:  50px;   /* margin titre */
+}
+
+
+/* =========================================================
+    6. Responsive
+   ========================================================= */
+
+/* ---------- Mobile (≤ 720px) ---------- */
+@media (max-width: 720px) {
+    :root {
+        --gutter:  20px;
+        --section: 64px;
+        --fs-h3:   34px;
+        --fs-lead: 18px;
+    }
+}

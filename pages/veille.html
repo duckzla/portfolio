@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio - Léo Adam - Veille</title>
+    <meta name="description" content="Page d'accueil du portfolio">
+
+    <!-- Polices utilisées -->
+    <link rel="preload" href="../assets/fonts/big-shoulders-display-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/instrument-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- CSS, ne pas changer l'ordre -->
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/layout.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/pages.css">
+
+    <!-- JS avec defer -->
+    <script src="../assets/js/main.js" defer></script>
+
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+</head>
+
+<body>
+    <header>
+        
+        <a href="../index.html" class="logo">LÉO.A</a>
+
+        <button class="burger btn btn--sun" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"> 
+            <img src="../assets/icons/menu.svg" class="burger__open" alt=""> 
+            <img src="../assets/icons/close.svg" class="burger__close" alt="">
+        </button>
+
+        <nav id="menu" class="nav" aria-label="Navigation principale">
+            <ul class="nav__list">
+                <li><a href="../pages/projets.html">Projets</a></li>
+                <li><a href="../pages/cv.html">CV</a></li>
+                <li><a href="../pages/ressources.html">Ressources</a></li>
+                <li><a href="../pages/veille.html">Veille</a></li>
+                <li><a href="../pages/contact.html" class="btn btn--sun">Me contacter</a></li>
+            </ul>
+
+            <div class="nav__extra">
+                <a class="btn btn--ink" href="https://www.linkedin.com/in/léo-adam" aria-label="LinkedIn" target="_blank">
+                    <span class="icone icone--linkedin"></span>
+                </a>
+                <a class="btn btn--ink" href="https://github.com/duckzla" aria-label="Github" target="_blank">
+                    <span class="icone icone--github"></span>
+                </a>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+        <section class="entete">
+            <h2 class="titre_sh_ink">
+            Veille
+            </h2>
+            <p class="label"> 
+                Comment je reste à jour sur le sujet : VS Code
+            </p>
+        </section>
+        <section class="section">
+            <!-- carte thèmes -->
+            <h3>
+                Mes 3 thèmes
+            </h3>
+            <div class="pres_veille">
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <div class="blue-b icon-box">
+                            <span class="icone icone--zap"></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <h3>Actus Tech</h3>
+                        <p>Innovation, failles et hacks d'entreprises. Il faut rester informer des grandes nouveautés/ évènements</p>
+                    </div>
+                </div>
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <div class="blue-b icon-box">
+                            <span class="icone icone--code"></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <h3>Outils du dev web</h3>
+                        <p>Suivre l'évolution des outils et des méthodes utilisés dans les projets modernes.</p>
+                    </div>
+                </div>
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <div class="blue-b icon-box">
+                            <span class="icone icone--extension"></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <h3>Mes Langages & Outils</h3>
+                        <p>Nouvelles fonctionnalités, bonnes pratiques et changements importants de ce que j'utilise.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h2 class="titre_sh_ink">
+                Focus VS Code
+            </h2>
+            <div class="pres_veille">
+                <div class="stat b--sun">
+                    <h3>
+                        73%
+                    </h3>
+                    <p>
+                        des devs l'utilise
+                    </p>
+                </div>
+                <div class="stat">
+                    <h3>
+                        100k+
+                    </h3>
+                    <p>
+                        d'extentsions disponibles
+                    </p>
+                </div>
+                <div class="stat">
+                    <h3>    
+                        multi langages
+                    </h3>
+                    <p>
+                        JS, Python, PHP...
+                    </p>
+                </div>
+                <div class="stat">
+                    <h3>
+                        Gratuit
+                    </h3>
+                    <p>
+                        et open-source
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <h3>
+                extensions incontournables
+            </h3>
+            <div class="extensions">
+                <!-- carte extension -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <h3>prettier</h3>
+                        <div>
+                            <span class="icone icone--extension blue-c"></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <p>
+                            formatage automatique du code (JSON, JS, HTML, CSS...)
+                    </div>
+                </div>
+                <!-- carte extension -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <h3>eslint</h3>
+                        <div>
+                            <span class="icone icone--extension blue-c"></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <p>
+                            Erreurs et mauvaise pratiques JS/TS en temps réel
+                        </p>
+                    </div>
+                </div>
+                <!-- carte extension -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <h3>gitlens</h3>
+                        <div>
+                            <span class="icone icone--extension blue-c"></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <p>
+                            Historique par ligne, blame, comparaison de branches
+                        </p>
+                    </div>
+                </div>
+                <!-- carte extension -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <h3>Live serveur</h3>
+                        <div>
+                            <span class="icone icone--extension blue-c"></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <p>
+                            Serveur local avec rechargement automatique
+                        </p>
+                    </div>
+                </div>
+                <!-- carte extension -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <h3>Docker</h3>
+                        <div>
+                            <span class="icone icone--extension blue-c"></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <p>
+                            Containers, images et docker compose depuis VS Code
+                        </p>
+                    </div>
+                </div>
+                <!-- carte extension -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <h3>PHP intelephense</h3>
+                        <div>
+                            <span class="icone icone--extension blue-c"></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <p>
+                            complétion, diagnostique et navigation PHP
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section evolution_vs">
+            <h3>
+                Nouveautés 2025-2026
+            </h3>
+            <div class="flex">
+                <!-- carte nouveautés 2025-2026 -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <h3>2025.01</h3>
+                    <div class="card_content">
+                        <p class="label">
+                            Agent mode copilot
+                        </p>
+                        <p>
+                            Copilot peut agir de façon autonome : créer des fichiers, lancer des commandes.
+                        </p>
+                    </div>
+                </div>
+                <!-- carte nouveautés 2025-2026 -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <h3>2025.03</h3>
+                    <div class="card_content">
+                        <p class="label">
+                            MCP intégré
+                        </p>
+                        <p>
+                            Model Context Protocol : brancher des outils externes à Copilot (APIs, bases de données).
+                        </p>
+                    </div>
+                </div>
+                <!-- carte nouveautés 2025-2026 -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <h3>2026.03</h3>
+                    <div class="card_content">
+                        <p class="label">
+                            Autopilot Mode
+                        </p>
+                        <p>
+                            L'agent peut modifier plusieurs fichiers, lancer des commandes terminal, corriger des erreurs et exécuter des workflows presque seul.
+                        </p>
+                    </div>
+                </div>
+                <!-- carte nouveautés 2025-2026 -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <h3>2026.04</h3>
+                    <div class="card_content">
+                        <p class="label">
+                            Agent Terminal Control
+                        </p>
+                        <p>
+                            Les agents peuvent utiliser le terminal directement pour lancer builds, tests, Docker, scripts npm et workflows backend/frontend.
+                        </p>
+                    </div>
+                </div>
+                <!-- carte nouveautés 2025-2026 -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <h3>2026.04</h3>
+                    <div class="card_content">
+                        <p class="label">
+                            Copilot Built-In
+                        </p>
+                        <p>
+                            GitHub Copilot est désormais intégré nativement dans VS Code sans installation d'extension.
+                        </p>
+                    </div>
+                </div>
+                <!-- carte nouveautés 2025-2026 -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <h3>2026.04</h3>
+                    <div class="card_content">
+                        <p class="label">
+                            Agent Debug Logs
+                        </p>
+                        <p>
+                            Historique complet des actions IA pour comprendre, auditer et déboguer les modifications automatiques du code.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sources">
+            <div class="source_vs card card__media">
+                <h2 class="titre_sh_sun">
+                    Mes sources
+                </h2>
+                <div class="sources_part">
+                    <h3>
+                        VS Code release Notes
+                    </h3>
+                    <p>
+                        La sources principale : chaque version détaillée.
+                    </p>
+                    <span class="separateur"></span>
+                </div>
+                <div class="sources_part">
+                    <h3>
+                        VS Code Blog
+                    </h3>
+                    <p>
+                        Article approfondis sur copilot et les agents.
+                    </p>
+                    <span class="separateur"></span>
+                </div>
+                <div class="sources_part">
+                    <h3>
+                        Github copilot changelog
+                    </h3>
+                    <p>
+                        Les évolutions IA semaine par semaine.
+                    </p>
+                    <span class="separateur"></span>
+                </div>
+                <div class="sources_part">
+                    <h3>
+                        Chaîne Youtube officielle
+                    </h3>
+                    <p>
+                        Chaîne Youtube officielle VS Code.
+                    </p>
+                    <span class="separateur"></span>
+                </div>
+                <div class="sources_part">
+                    <h3>
+                        Chaîne Youtube faizdev
+                    </h3>
+                    <p>
+                        De nombreux tutoriels VS Code.
+                    </p>
+                    <span class="separateur"></span>
+                </div>
+                <div class="sources_part">
+                    <h3>
+                        r/vscode
+                    </h3>
+                    <p>
+                        Discussions de la communauté.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="source_autre">
+                <!-- carte feedly -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <div class="blue-b icon-box">
+                            <span class="icone icone--rss "></span>
+                        </div>
+                        <p class="label">Outil</p>
+                    </div>
+                    <div class="card_content">
+                        <h3>Feedly</h3>
+                        <p>Vision global de la tech: nouvelles technos, failles, tendances.
+                        </p>
+                    </div>
+                    <div class="btn btn--ink div_link">
+                        <p>
+                            Découvrir
+                        </p>
+                        <span class="icone icone--arrow-up-r"></span>
+                        <a class="_link" href="https://feedly.com/" aria-label="lien vers le site feedly" target="_blank"></a>
+                    </div>
+                </div>
+                <!-- carte daily.dev -->
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <div class="blue-b icon-box">
+                            <span class="icone icone--zap "></span>
+                        </div>
+                        <p class="label">Extension</p>
+                    </div>
+                    <div class="card_content">
+                        <h3>Daily.dev</h3>
+                        <p>Flux personnalisé sur le développement.
+                        </p>
+                    </div>
+                    <div class="btn btn--ink div_link">
+                        <p>
+                            Découvrir
+                        </p>
+                        <span class="icone icone--arrow-up-r"></span>
+                        <a class="_link" href="https://daily.dev" aria-label="lien vers le site daily.dev" target="_blank"></a>
+                    </div>
+                </div>
+                <!-- carte youtube -->
+                <div class="card card__media b--sun">
+                    <!-- entete de la carte -->
+                    <div class="card__top">
+                        <div class="blue-b icon-box">
+                            <span class="icone icone--play"></span>
+                        </div>
+                    </div>
+                    <div class="card_content">
+                        <h3>Youtube & communautés</h3>
+                        <p>Tutoriels, replays de conférences, vidéos thématiques.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer_big">
+            <div class="separator">
+            </div>
+            <div class="footer_content">
+                <h2>
+                    on en parle?
+                </h2>
+                <div>
+                    <div class="btn btn--ink">
+                        <span class="icone icone--mail" aria-hidden="true" ></span>
+                        <p>
+                            l14.adm@gmail.com
+                        </p>
+                    </div>
+                    <div class="btn div_link">
+                        <span class="icone icone--github">
+                        </span>
+                        <p>
+                            Github
+                        </p>
+                        <a class="_link" href="https://github.com/duckzla" target="_blank" aria-label="Github"></a>
+                    </div>
+                    <div class="btn div_link">
+                        <span class="icone icone--linkedin" aria-hidden="true"></span>
+                        <p>
+                            Linkedin
+                        </p>
+                        <a class="_link" href="https://www.linkedin.com/in/léo-adam" target="_blank" aria-label="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="legale">
+                <p><i>©2026. All rights reserved. Réalisé par Léo ADAM - BTS SIO</i></p>
+            </div>
+        </div>
+    </footer>
+</body>
