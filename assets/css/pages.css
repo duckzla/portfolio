@@ -112,21 +112,31 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--gap);
-}
-
-.cadre_photo_chir {
-    display: flex;
-    justify-content: center;
     align-items: center;
 }
 
+.cadre_photo_chir {
+    position: relative;
+    width: fit-content;   /* le cadre = la taille de la photo */
+    margin: 0 auto;       /* centré dans la page */
+}
+
 .photo_chir {
+    display: block;
+    width: 100%;
     max-width: 450px;
-    max-height: auto;
     object-fit: cover;
     color: var(--ink);
     border: var(--border);
     box-shadow: var(--shadow-sm);
+}
+
+.fleche-moi {
+    position: absolute;
+    width: 45%;           /* proportionnelle à la photo */
+    height: auto;
+    top: -18%;
+    right: 8%;          /* déborde à droite de la photo */
 }
 
 .pres_before {
@@ -187,9 +197,56 @@
 
 .cv {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
     gap: var(--gap);
 }
+
+/*-----*/
+
+
+
+.cv_view {
+    position: relative;
+    width: 100%;   /* le cadre = la taille de la photo */
+          /* centré dans la page */
+
+    &.cv_page-2 .page-1 {
+        display: none;
+    }
+
+    &.cv_page-2 .page-2 {
+        display: block;
+    }
+}
+
+.page_cv {
+    display: block;
+    position: relative;
+    top: var(--gap);
+    width: 100%;
+    object-fit: cover;
+    color: var(--ink);
+    border: var(--border);
+    box-shadow: var(--shadow-sm);
+}
+
+.fleche-la-suite {
+    position: absolute;
+    width: 45%;           /* proportionnelle à la photo */
+    height: auto;
+    top: -10%;
+    right: -25%;          /* déborde à droite de la photo */
+}
+
+
+.page-2 {
+    display: none;
+}
+
+
+
+
+/*-----*/
 
 .recap_cv {
     display: flex;
@@ -466,6 +523,13 @@
         max-width: 275px;
     }
 
+    .fleche-moi {
+        width: 35%;           /* proportionnelle à la photo */
+        height: auto;
+        top: -10%;
+        right: 17%;          /* déborde à droite de la photo */
+        }
+
     /* --- 2. Projets --- */
     .projet {
         display: flex;
@@ -499,6 +563,11 @@
     /* --- 3. CV --- */
     .cv {
         grid-template-columns: 1fr;
+    }
+
+    .fleche-la-suite {
+        right: -3%;
+        top: -5%;
     }
 
     .compet {
