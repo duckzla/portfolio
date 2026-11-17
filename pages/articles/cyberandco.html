@@ -102,15 +102,56 @@
             <div class="pres_protocoles">
                 <div class="card card__media">
                     <!-- entete de la carte -->
-                    <div class="card__top">
-                        <p class="label">
-                            Projet 1
-                        </p>
-                        <p class="tag label">DEV</p>
-                    </div>
+                    <p class="label">
+                        Mode Opératoire
+                    </p>
                     <div class="card_content">
-                        <h3>Nom protocole</h3>
-                        <p>description protocole</p>
+                        <h3>Première connexion au serveur</h3>
+                        <p>Comment accéder pour la première fois au serveur Ubuntu de Cyber&Co : installer WSL pour avoir un terminal Linux sous Windows, faire ajouter sa clé publique dans les clés autorisées par l’admin système, puis se connecter en SSH.</p>
+                    </div>
+                    <div class="outils_use">
+                        <div class="outil_use">
+                            <p class="label">Logiciel utilisé</p>
+                            <p>WSL (Ubuntu), terminal SSH</p>
+                        </div>
+                    </div>
+                    <div class="btn_ligne">
+                        <div class="btn btn--ink div_link">
+                        <p>
+                            Lire le PDF
+                        </p>
+                        <span class="icone icone--arrow-r c--sun"></span>
+                        <a class="_link" href="/assets/docs/cyberandco/Mode_operatoire_1re_connexion_au_serveur_.pdf" aria-label="lien pdf protocole" ></a>
+                        </div>
+                    </div>            
+                </div>
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <p class="label">
+                        Mode Opératoire
+                    </p>
+                    <div class="card_content">
+                        <h3>Générer une clé SSH</h3>
+                        <p>Créer une paire de clés ed25519 pour se connecter de façon sécurisée sans mot de passe. Le mode opératoire explique la différence entre la clé publique (à partager) et la clé privée (à garder pour soi), et l’intérêt d’ajouter une passphrase.</p>
+                    </div>
+                    <div class="btn_ligne">
+                        <div class="btn btn--ink div_link">
+                        <p>
+                            Lire le PDF
+                        </p>
+                        <span class="icone icone--arrow-r c--sun"></span>
+                        <a class="_link" href="/assets/docs/cyberandco/Mode_operatoire_Générer_une_clé_SSH.pdf" aria-label="lien pdf protocole" ></a>
+                        </div>
+                    </div>            
+                </div>
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <p class="label">
+                        Mode Opératoire
+                    </p>
+                    <div class="card_content">
+                        <h3>Filezilla, connexion au serveur</h3>
+                        <p>Configurer Filezilla en SFTP avec authentification par fichier de clé pour accéder aux fichiers du serveur. Couvre aussi la reconnexion au quotidien via le gestionnaire de sites et la recherche de fichiers sur le serveur distant.</p>
                     </div>
                     <div class="outils_use">
                         <div class="outil_use">
@@ -124,40 +165,60 @@
                             Lire le PDF
                         </p>
                         <span class="icone icone--arrow-r c--sun"></span>
-                        <a class="_link" href="" aria-label="lien pdf protocole" ></a>
+                        <a class="_link" href="/assets/docs/cyberandco/Mode_operatoire_Filezilla_connexion_au_serveur.pdf" aria-label="lien pdf protocole" ></a>
                         </div>
-                    </div>   
-                    <div class="tag">la on rajoute ce que ça a ajouter comme case</div>            
+                    </div>            
                 </div>
                 <div class="card card__media">
-                        <!-- entete de la carte -->
-                        <div class="card__top">
-                            <p class="label">
-                                Projet 1
-                            </p>
-                            <p class="tag label">DEV</p>
-                        </div>
-                        <div class="card_content">
-                            <h3>Nom protocole</h3>
-                            <p>description protocole</p>
-                        </div>
-                        <div class="outils_use">
-                            <div class="outil_use">
-                                <p class="label">Logiciel utilisé</p>
-                                <p>Filezilla</p>
-                            </div>
-                        </div>
-                        <div class="btn_ligne">
-                            <div class="btn btn--ink div_link">
-                            <p>
-                                Lire le PDF
-                            </p>
-                            <span class="icone icone--arrow-r c--sun"></span>
-                            <a class="_link" href="" aria-label="lien pdf protocole" ></a>
-                            </div>
-                        </div>   
-                        <div class="tag">la on rajoute ce que ça a ajouter comme case</div>             
+                    <!-- entete de la carte -->
+                    <p class="label">
+                        Mode Opératoire
+                    </p>
+                    <div class="card_content">
+                        <h3>Installer Ghost en local</h3>
+                        <p>Monter une instance Ghost en local pour développer sans toucher au serveur de production : passer sur la bonne version de Node avec nvm-windows, installer Ghost-CLI, débloquer l’exécution de scripts PowerShell et gérer l’instance (start, stop, logs).</p>
                     </div>
+                    <div class="outils_use">
+                        <div class="outil_use">
+                            <p class="label">Logiciel utilisé</p>
+                            <p>Ghost, Node.js, nvm-windows</p>
+                        </div>
+                    </div>
+                    <div class="btn_ligne">
+                        <div class="btn btn--ink div_link">
+                        <p>
+                            Lire le PDF
+                        </p>
+                        <span class="icone icone--arrow-r c--sun"></span>
+                        <a class="_link" href="/assets/docs/cyberandco/Mode_operatoire_Installer_Ghost_en_local.pdf" aria-label="lien pdf protocole" ></a>
+                        </div>
+                    </div>            
+                </div>
+                <div class="card card__media">
+                    <!-- entete de la carte -->
+                    <p class="label">
+                        Mode Opératoire
+                    </p>
+                    <div class="card_content">
+                        <h3>Modifier la home page avec Ghost</h3>
+                        <p>Comment est organisée la page d’accueil du site Cyber&Co : un fichier home.hbs qui appelle des partials, un par section. Le mode opératoire montre comment ajouter une section, et pourquoi ce découpage aide : on peut travailler à plusieurs, et un bug dans une section ne casse pas les autres. Le style passe par Tailwind CSS.</p>
+                    </div>
+                    <div class="outils_use">
+                        <div class="outil_use">
+                            <p class="label">Logiciel utilisé</p>
+                            <p>Ghost (Handlebars), Tailwind CSS</p>
+                        </div>
+                    </div>
+                    <div class="btn_ligne">
+                        <div class="btn btn--ink div_link">
+                        <p>
+                            Lire le PDF
+                        </p>
+                        <span class="icone icone--arrow-r c--sun"></span>
+                        <a class="_link" href="/assets/docs/cyberandco/Mode_operatoire_Modifier_la_home_page_avec_ghost_.pdf" aria-label="lien pdf protocole" ></a>
+                        </div>
+                    </div>            
+                </div>
         </section>
     </main>
     <footer>
