@@ -124,7 +124,7 @@
 .photo_chir {
     display: block;
     width: 100%;
-    max-width: 450px;
+    max-width: 90%;
     object-fit: cover;
     color: var(--ink);
     border: var(--border);
@@ -133,10 +133,10 @@
 
 .fleche-moi {
     position: absolute;
-    width: 45%;           /* proportionnelle à la photo */
+    width: 30%;           /* proportionnelle à la photo */
     height: auto;
-    top: -18%;
-    right: 8%;          /* déborde à droite de la photo */
+    top: -8%;
+    right: 26%;          /* déborde à droite de la photo */
 }
 
 .pres_before {
